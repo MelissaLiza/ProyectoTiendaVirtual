@@ -1,4 +1,4 @@
-package com.tienda.registryserver;
+package com.tienda.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class RegistryServerApplication {
+public class GatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RegistryServerApplication.class, args);
+		SpringApplication.run(GatewayApplication.class, args);
 	}
 
 }

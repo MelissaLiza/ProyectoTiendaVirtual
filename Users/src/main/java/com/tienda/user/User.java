@@ -10,6 +10,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -49,6 +53,8 @@ public class User implements Serializable {
 	private LocalDate updateAt;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name="usuarios_roles", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns= @JoinColumn(name = "role_id"),
+	uniqueConstraints =  {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})
 	private List<Rol> roles;
 
 }
