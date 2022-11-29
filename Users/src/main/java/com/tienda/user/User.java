@@ -10,9 +10,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.UniqueConstraint;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
 
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -22,6 +19,7 @@ import com.tienda.rol.Rol;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @Entity
 @AllArgsConstructor
@@ -49,12 +47,15 @@ public class User implements Serializable {
 	@Column(unique=true, length = 100)
 	private String email;
 	
+	@Column(name="createat")
 	private LocalDate createAt;
+	
+	@Column(name="updateat")
 	private LocalDate updateAt;
 	
+	/*@JoinTable(name="usuarios_roles", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns= @JoinColumn(name = "role_id"),
+	uniqueConstraints =  {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})*/
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name="usuarios_roles", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns= @JoinColumn(name = "role_id"),
-	uniqueConstraints =  {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})
 	private List<Rol> roles;
 
 }
