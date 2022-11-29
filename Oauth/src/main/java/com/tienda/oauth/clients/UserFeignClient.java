@@ -4,7 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.tienda.commons.commons.entity.User;
+import com.commons.entity.User;
+
 
 @FeignClient(name="service-user")
 public interface UserFeignClient {
