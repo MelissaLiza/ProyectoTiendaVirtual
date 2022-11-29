@@ -22,6 +22,7 @@ import com.tienda.rol.Rol;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @Entity
 @AllArgsConstructor
@@ -49,12 +50,15 @@ public class User implements Serializable {
 	@Column(unique=true, length = 100)
 	private String email;
 	
+	@Column(name="createat")
 	private LocalDate createAt;
+	
+	@Column(name="updateat")
 	private LocalDate updateAt;
 	
+	/*@JoinTable(name="usuarios_roles", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns= @JoinColumn(name = "role_id"),
+	uniqueConstraints =  {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})*/
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name="usuarios_roles", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns= @JoinColumn(name = "role_id"),
-	uniqueConstraints =  {@UniqueConstraint(columnNames = {"usuario_id","role_id"})})
 	private List<Rol> roles;
 
 }
