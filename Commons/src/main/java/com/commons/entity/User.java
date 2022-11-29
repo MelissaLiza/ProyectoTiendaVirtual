@@ -39,13 +39,16 @@ public class User implements Serializable {
 	@Column(length = 60)
 	private String username;
 	
-	@Column(length = 60)
 	private String password;
 	private String firstname;
 	private String lastname;
 	
 	@Column(unique=true, length = 100)
 	private String email;
+	
+	private boolean enabled;
+	
+	private Integer intentos;
 	
 	@Column(name="createat")
 	private LocalDate createAt;

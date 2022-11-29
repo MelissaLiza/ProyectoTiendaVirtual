@@ -1,5 +1,5 @@
-INSERT INTO usuarios(username,password,firstname,lastname,email,createat,updateat)VALUES('jose','123456','JOSE HERNAN','LIZA GARAVITO','jose@gmail.com',NOW(),NOW());
-INSERT INTO usuarios(username,password,firstname,lastname,email,createat,updateat)VALUES('melissa','654321','MELISSA','LIZA SHERON','melissa@gmail.com',NOW(),NOW());
+INSERT INTO usuarios(username,password,firstname,lastname,enabled,email,createat,updateat)VALUES('jose','$2a$10$HfczD9XTDBjRZPTKfl8wU.E8B3TLDC8LxVJGLQRaiAOqe2WX4/Q2K','JOSE HERNAN','LIZA GARAVITO',true,'jose@gmail.com',NOW(),NOW());
+INSERT INTO usuarios(username,password,firstname,lastname,enabled,email,createat,updateat)VALUES('melissa','$2a$10$xgK9mVS5Av2Br1iRWICC0OAtQZbnDBS8/R0MnYSc7MiBwSI2OZp1a','MELISSA','LIZA SHERON',true,'melissa@gmail.com',NOW(),NOW());
 
 INSERT INTO roles(description)VALUES('ROLE_USER');
 INSERT INTO roles(description)VALUES('ROLE_ADMIN');
