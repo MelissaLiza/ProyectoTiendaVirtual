@@ -8,7 +8,7 @@
 		<version>2.7.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tienda.commons</groupId>
+	<groupId>com.commons</groupId>
 	<artifactId>Commons</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Commons</name>
@@ -33,6 +33,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-
 </project>

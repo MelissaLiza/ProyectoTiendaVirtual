@@ -1,6 +1,7 @@
 package com.tienda.user;
 
 import java.io.Serializable;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import com.tienda.rol.Rol;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Data
 @Entity

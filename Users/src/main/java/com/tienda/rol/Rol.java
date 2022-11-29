@@ -1,9 +1,6 @@
 package com.tienda.rol;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +12,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-
 @Entity
 @Table(name="roles")
 

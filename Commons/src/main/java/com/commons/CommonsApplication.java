@@ -1,4 +1,4 @@
-package com.tienda.commons;
+package com.commons;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
